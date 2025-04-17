@@ -16,4 +16,4 @@ spec:
           service:
             name: aws9-svc-default
             port:
-              number: 8080
+              number: 80
