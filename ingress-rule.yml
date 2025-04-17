@@ -1,17 +1,16 @@
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: aws9-portal
   annotations:
-    # nginx.ingress.kubernetes.io/rewrite-target: / # 이 설정 제거
+    nginx.ingress.kubernetes.io/rewrite-target: / 
 spec:
   ingressClassName: nginx
   rules:
   - host: www.aws9.pri
     http:
       paths:
-      - path: /
+      - path: "/shop"
         pathType: Prefix
         backend:
           service:
