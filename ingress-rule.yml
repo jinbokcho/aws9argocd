@@ -10,17 +10,10 @@ spec:
   - host: www.aws9.pri
     http:
       paths:
-      - path: "/green" #www.aws9.pri/shop
+      - path: "" #www.aws9.pri/
         pathType: Prefix
         backend:
           service:
-            name: aws9-svc-green1
+            name: aws9-svc-default
             port:
-              number: 8081
-      - path: "/blue"
-        pathType: Prefix
-        backend:
-          service:
-            name: aws9-svc-blue1
-            port:
-              number: 8081
+              number: 8080
