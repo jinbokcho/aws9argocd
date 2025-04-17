@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: default-pvc
+  name: default-pvc1
 spec:
   storageClassName: nginx-sc
   accessModes:

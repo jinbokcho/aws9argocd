@@ -14,6 +14,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: aws9-svc-default
+            name: aws9-svc-default1
             port:
               number: 8080
