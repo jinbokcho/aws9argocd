@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aws9-deploy-default1
+  name: aws9-deploy-default
 spec:
   replicas: 1
   selector:
@@ -21,13 +21,13 @@ spec:
       volumes:
         - name: default-data
           persistentVolumeClaim:
-            claimName: default-pvc1
+            claimName: default-pvc
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: aws9-svc-default1
+  name: aws9-svc-default
 spec:
   ports:
   - name: aws9-port-default
@@ -48,7 +48,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: aws9-deploy-default1
+    name: aws9-deploy-default
   targetCPUUtilizationPercentage: 60
 
 # ---
