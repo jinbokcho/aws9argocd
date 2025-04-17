@@ -10,7 +10,7 @@ spec:
   - host: www.aws9.pri
     http:
       paths:
-      - path: "/shop" #www.aws9.pri/
+      - path: /
         pathType: Prefix
         backend:
           service:
